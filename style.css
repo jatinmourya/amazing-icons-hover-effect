@@ -1,1 +1,123 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "lato", sans-serif;
+      transition: 0.25s ease-in all;
+    }
 
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span {
+      position: relative;
+      height: 54px;
+      width: 54px;
+      color: #333333;
+      border-radius: 10px;
+      margin: 0 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span i {
+      border-radius: 9px;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 48px;
+      width: 48px;
+      background-color: #ffffff;
+    }
+
+    span:hover {
+      transform: scale(1.1);
+    }
+
+    span:nth-child(1) {
+      background-color: purple;
+    }
+
+    span:nth-child(1):hover {
+      background-color: transparent;
+      color: purple;
+    }
+
+    span:nth-child(1):hover i {
+      box-shadow: 0 5px 10px purple;
+    }
+
+    span:nth-child(2) {
+      background-color: #007900;
+    }
+
+    span:nth-child(2):hover {
+      background-color: transparent;
+      color: #007900;
+    }
+
+    span:nth-child(2):hover i {
+      box-shadow: 0 5px 10px #007900;
+    }
+
+    span:nth-child(3) {
+      background-color: #242424;
+    }
+
+    span:nth-child(3):hover {
+      background-color: transparent;
+      color: #242424;
+    }
+
+    span:nth-child(3):hover i {
+      box-shadow: 0 5px 10px #242424;
+    }
+
+    span:nth-child(4) {
+      background-color: #06a7bd;
+    }
+
+    span:nth-child(4):hover {
+      background-color: transparent;
+      color: #06a7bd;
+    }
+
+    span:nth-child(4):hover i {
+      box-shadow: 0 5px 10px #06a7bd;
+    }
+
+    span::before {
+      content: attr(data-text);
+      position: absolute;
+      bottom: -100%;
+      z-index: 1;
+      visibility: hidden;
+      text-align: center;
+      background-color: transparent;
+      width: 100px;
+      padding: 5px;
+      border: 2px solid #800080;
+      border-radius: 15px;
+    }
+
+    span:nth-child(2)::before {
+      border: 2px solid #007900;
+    }
+
+    span:nth-child(3)::before {
+      border: 2px solid #242424;
+    }
+
+    span:nth-child(4)::before {
+      border: 2px solid #06a7bd;
+    }
+
+    span:hover::before {
+      visibility: visible;
+    }
